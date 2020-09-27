@@ -14,7 +14,7 @@ namespace empwage
             int wagePerHour = 20;
             int workHours = 0;
             int totalEmpWage = 0;
-            int wagePerMonth = 20;
+            int workDaysPerMonth = 20;
             int totalMonthEmpWage = 0
 
             int empStatus = new Random(0,3);
@@ -35,10 +35,13 @@ namespace empwage
            
 
             totalEmpWage = workHours * wagePerHour;
-            totalMonthEmpWage = totalEmpWage * wagePerMonth;
             Console.WriteLine("Total Employee Wage is :"+totalEmpWage);
-            Console.WriteLine("Total Month Employee Wage is :" + totalMonthEmpWage);
 
+            if (workDaysPerMonth == 20 ||workDaysPerMonth * workHours == 100 )
+            {
+                totalMonthEmpWage = totalEmpWage * workDaysPerMonth;
+                Console.WriteLine("Total Month Employee Wage is :" + totalMonthEmpWage);
+            }
         }
     }
 }
