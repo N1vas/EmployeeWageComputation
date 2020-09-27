@@ -16,21 +16,21 @@ namespace empwage
             int totalEmpWage = 0;
 
             int empStatus = new Random(0,3);
-            if (empStatus = fullTime)
+
+            switch (empStatus) 
             {
-                Console.WriteLine("Employee is present");
-                workHours = 8;
+                case 1:
+                    workHours = 8;
+                    break;
+                case 2:
+                    workHours = 4;
+                    break;
+                case 3:
+                    workHours = 0;
+                    break;
             }
-            else if(empStatus == partTime)
-            {
-                Console.WriteLine("Employee is partTime");
-                workHours = 4;
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
-                workHours = 0;
-            }
+
+           
 
             totalEmpWage = workHours * wagePerHour;
             Console.WriteLine("Total Employee Wage is :"+totalEmpWage);
